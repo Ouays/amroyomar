@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Detail – TetouanDrive</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/car.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/data.js" defer></script>
+    <script src="js/config.js" defer></script>
+    <script src="js/car.js"  defer></script>
+    <script src="js/reservation.js" defer></script>
+        <script src="js/include.js" defer></script>
+</head>
+<body data-page="car">
+
+<div id="site-header"></div>
+<!-- Breadcrumb -->
+<div class="car-hero">
+    <div class="car-hero-overlay"></div>
+    <img src="img/car1.jpg" id="carHeroBg" class="car-hero-bg" alt="">
+
+    <div class="car-hero-left">
+        <div class="breadcrumb-hero">
+            <a href="index.html">Accueil</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="fleet.html">Nos Voitures</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span id="breadcrumbName">Dacia Duster</span>
+        </div>
+        <h1 class="car-hero-title" id="carPageTitre">Dacia Duster</h1>
+        <div class="car-hero-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+        </div>
+    </div>
+</div>
+
+<!-- MAIN CAR SECTION -->
+<section class="car-detail">
+
+    <div class="car-gallery">
+        
+        <div class="main-slider">
+            <button class="slide-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="slides-wrapper" id="slidesWrapper"><div class="slide"><img src="img/car1.jpg" alt="Dacia Duster"></div><div class="slide active"><img src="img/car2.jpg" alt="Dacia Duster"></div><div class="slide"><img src="img/car3.jpg" alt="Dacia Duster"></div><div class="slide"><img src="img/car1.jpg" alt="Dacia Duster"></div></div>
+            <button class="slide-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div class="thumbnails" id="thumbsContainer"><div class="thumb"><img src="img/car1.jpg" alt="thumb 1"></div><div class="thumb active"><img src="img/car2.jpg" alt="thumb 2"></div><div class="thumb"><img src="img/car3.jpg" alt="thumb 3"></div><div class="thumb"><img src="img/car1.jpg" alt="thumb 4"></div></div>
+    </div>
+
+    <div class="booking-panel">
+    <p class="panel-price"><span id="carPrice">299</span> <span class="panel-currency">€ / jour</span></p>
+
+        <div class="quick-specs">
+            <div class="qspec"><i class="fa-solid fa-user-group"></i> <span id="specPlaces">5 Places</span></div>
+            <div class="qspec"><i class="fa-solid fa-door-open"></i>  <span id="specPortes">4 Portes</span></div>
+            <div class="qspec"><i class="fa-solid fa-gears"></i>       <span id="specTrans">Manuelle</span></div>
+            <div class="qspec"><i class="fa-solid fa-gas-pump"></i>   <span id="specFuel">Diesel</span></div>
+            <div class="qspec"><i class="fa-solid fa-snowflake"></i>  <span id="specAC">Climatisation</span></div>
+            <div class="qspec"><i class="fa-solid fa-location-dot"></i><span id="specGPS">Sans GPS</span></div>
+        </div>
+
+        <a href="#reservationSection" id="waLink" class="panel-btn whatsapp-panel">
+            <i class="fa-brands fa-whatsapp"></i> Réserver sur WhatsApp
+        </a>
+        <a href="tel:+212600000000" class="panel-btn call-panel">
+            <i class="fa-solid fa-phone"></i> Appelez-nous
+        </a>
+    </div>
+
+</section>
+
+<!-- RESERVATION FORM -->
+<section class="reservation-section" id="reservationSection">
+    <h2 class="reservation-title">Formulaire De Réservation</h2>
+
+    <div class="reservation-grid">
+
+        <div class="reservation-form-col">
+
+            <div class="res-block">
+                <h3 class="res-subheading">Dates &amp; Lieu</h3>
+
+                <div class="res-row">
+                    <div class="res-field">
+                        <label for="resPickupLoc">Lieu de prise en charge*</label>
+                        <select id="resPickupLoc" required>
+                            <option value="">Sélectionnez...</option>
+                            <option>Agence TetouanDrive - Tétouan</option>
+                            <option>Aéroport de Tanger</option>
+                            <option>Livraison à mon adresse</option>
+                        </select>
+                    </div>
+                    <div class="res-field">
+                        <label for="resReturnLoc">Lieu de retour*</label>
+                        <select id="resReturnLoc" required>
+                            <option value="">Sélectionnez...</option>
+                            <option>Agence TetouanDrive - Tétouan</option>
+                            <option>Aéroport de Tanger</option>
+                            <option>Récupération à mon adresse</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="res-row">
+                    <div class="res-field">
+                        <label>Date &amp; heure de départ*</label>
+                        <div class="res-dt-group">
+                            <button type="button" class="res-date-btn" id="resPickupDateBtn">
+                                <i class="fa-regular fa-calendar"></i>
+                                <span id="resPickupDateLabel">Choisir une date</span>
+                            </button>
+                            <select id="resPickupTime" class="res-time-select">
+                                <option value="">--:--</option>
+                            </select>
+                        </div>
+                        <input type="hidden" id="resPickupDate">
+                    </div>
+                    <div class="res-field">
+                        <label>Date &amp; heure de retour*</label>
+                        <div class="res-dt-group">
+                            <button type="button" class="res-date-btn" id="resReturnDateBtn">
+                                <i class="fa-regular fa-calendar"></i>
+                                <span id="resReturnDateLabel">Choisir une date</span>
+                            </button>
+                            <select id="resReturnTime" class="res-time-select">
+                                <option value="">--:--</option>
+                            </select>
+                        </div>
+                        <input type="hidden" id="resReturnDate">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom calendar popup (shared by pickup / return fields) -->
+            <div class="res-cal-overlay" id="resCalOverlay">
+                <div class="res-cal-modal">
+                    <div class="res-cal-modal-header">
+                        <span class="res-cal-modal-title" id="resCalModalTitle">Choisir une date</span>
+                        <button type="button" class="res-cal-close-x" id="resCalCloseX"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="res-cal-nav">
+                        <button type="button" class="res-cal-nav-btn" id="resCalPrev"><i class="fa-solid fa-chevron-left"></i></button>
+                        <span class="res-cal-month-label" id="resCalMonthLabel">—</span>
+                        <button type="button" class="res-cal-nav-btn" id="resCalNext"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                    <div class="res-cal-dow-row">
+                        <span>Lu</span><span>Ma</span><span>Me</span><span>Je</span><span>Ve</span><span>Sa</span><span>Di</span>
+                    </div>
+                    <div class="res-cal-grid" id="resCalGrid"></div>
+                    <div class="res-cal-legend">
+                        <span><i class="res-legend-dot res-legend-avail"></i> Disponible</span>
+                        <span><i class="res-legend-dot res-legend-booked"></i> Indisponible</span>
+                    </div>
+                    <div class="res-cal-modal-footer">
+                        <button type="button" class="res-cal-btn-secondary" id="resCalToday">Aujourd'hui</button>
+                        <button type="button" class="res-cal-btn-secondary" id="resCalClose">Fermer</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="res-block">
+                <h3 class="res-subheading">Coordonnées De Réservation</h3>
+
+                <div class="res-row">
+                    <div class="res-field">
+                        <label for="resCivilite">Civilité*</label>
+                        <select id="resCivilite" required>
+                            <option value="">Sélectionnez...</option>
+                            <option>M.</option>
+                            <option>Mme</option>
+                        </select>
+                    </div>
+                    <div class="res-field">
+                        <label for="resVol">N° de vol</label>
+                        <input type="text" id="resVol" placeholder="Optionnel">
+                    </div>
+                </div>
+
+                <div class="res-row">
+                    <div class="res-field">
+                        <label for="resNom">Nom*</label>
+                        <input type="text" id="resNom" required>
+                    </div>
+                    <div class="res-field">
+                        <label for="resPrenom">Prénom*</label>
+                        <input type="text" id="resPrenom" required>
+                    </div>
+                </div>
+
+                <div class="res-row">
+                    <div class="res-field">
+                        <label for="resEmail">Email*</label>
+                        <input type="email" id="resEmail" required>
+                    </div>
+                    <div class="res-field">
+                        <label for="resTel">Téléphone*</label>
+                        <input type="tel" id="resTel" required>
+                    </div>
+                </div>
+
+                <div class="res-row">
+                    <div class="res-field">
+                        <label for="resPays">Votre pays*</label>
+                        <select id="resPays" required>
+                            <option value="">Sélectionnez...</option>
+                            <option>Maroc</option>
+                            <option>Afghanistan</option>
+                            <option>Afrique du Sud</option>
+                            <option>Albanie</option>
+                            <option>Algérie</option>
+                            <option>Allemagne</option>
+                            <option>Andorre</option>
+                            <option>Angola</option>
+                            <option>Antigua-et-Barbuda</option>
+                            <option>Arabie saoudite</option>
+                            <option>Argentine</option>
+                            <option>Arménie</option>
+                            <option>Australie</option>
+                            <option>Autriche</option>
+                            <option>Azerbaïdjan</option>
+                            <option>Bahamas</option>
+                            <option>Bahreïn</option>
+                            <option>Bangladesh</option>
+                            <option>Barbade</option>
+                            <option>Belgique</option>
+                            <option>Belize</option>
+                            <option>Bénin</option>
+                            <option>Bhoutan</option>
+                            <option>Biélorussie</option>
+                            <option>Birmanie</option>
+                            <option>Bolivie</option>
+                            <option>Bosnie-Herzégovine</option>
+                            <option>Botswana</option>
+                            <option>Brésil</option>
+                            <option>Brunei</option>
+                            <option>Bulgarie</option>
+                            <option>Burkina Faso</option>
+                            <option>Burundi</option>
+                            <option>Cambodge</option>
+                            <option>Cameroun</option>
+                            <option>Canada</option>
+                            <option>Cap-Vert</option>
+                            <option>Chili</option>
+                            <option>Chine</option>
+                            <option>Chypre</option>
+                            <option>Colombie</option>
+                            <option>Comores</option>
+                            <option>Congo</option>
+                            <option>Corée du Nord</option>
+                            <option>Corée du Sud</option>
+                            <option>Costa Rica</option>
+                            <option>Côte d'Ivoire</option>
+                            <option>Croatie</option>
+                            <option>Cuba</option>
+                            <option>Danemark</option>
+                            <option>Djibouti</option>
+                            <option>Dominique</option>
+                            <option>Égypte</option>
+                            <option>Émirats arabes unis</option>
+                            <option>Équateur</option>
+                            <option>Érythrée</option>
+                            <option>Espagne</option>
+                            <option>Estonie</option>
+                            <option>Eswatini</option>
+                            <option>États-Unis</option>
+                            <option>Éthiopie</option>
+                            <option>Fidji</option>
+                            <option>Finlande</option>
+                            <option>France</option>
+                            <option>Gabon</option>
+                            <option>Gambie</option>
+                            <option>Géorgie</option>
+                            <option>Ghana</option>
+                            <option>Grèce</option>
+                            <option>Grenade</option>
+                            <option>Guatemala</option>
+                            <option>Guinée</option>
+                            <option>Guinée équatoriale</option>
+                            <option>Guinée-Bissau</option>
+                            <option>Guyana</option>
+                            <option>Haïti</option>
+                            <option>Honduras</option>
+                            <option>Hongrie</option>
+                            <option>Îles Marshall</option>
+                            <option>Îles Salomon</option>
+                            <option>Inde</option>
+                            <option>Indonésie</option>
+                            <option>Irak</option>
+                            <option>Iran</option>
+                            <option>Irlande</option>
+                            <option>Islande</option>
+                            <option>Israël</option>
+                            <option>Italie</option>
+                            <option>Jamaïque</option>
+                            <option>Japon</option>
+                            <option>Jordanie</option>
+                            <option>Kazakhstan</option>
+                            <option>Kenya</option>
+                            <option>Kirghizistan</option>
+                            <option>Kiribati</option>
+                            <option>Kosovo</option>
+                            <option>Koweït</option>
+                            <option>Laos</option>
+                            <option>Lesotho</option>
+                            <option>Lettonie</option>
+                            <option>Liban</option>
+                            <option>Liberia</option>
+                            <option>Libye</option>
+                            <option>Liechtenstein</option>
+                            <option>Lituanie</option>
+                            <option>Luxembourg</option>
+                            <option>Macédoine du Nord</option>
+                            <option>Madagascar</option>
+                            <option>Malaisie</option>
+                            <option>Malawi</option>
+                            <option>Maldives</option>
+                            <option>Mali</option>
+                            <option>Malte</option>
+                            <option>Maurice</option>
+                            <option>Mauritanie</option>
+                            <option>Mexique</option>
+                            <option>Micronésie</option>
+                            <option>Moldavie</option>
+                            <option>Monaco</option>
+                            <option>Mongolie</option>
+                            <option>Monténégro</option>
+                            <option>Mozambique</option>
+                            <option>Namibie</option>
+                            <option>Nauru</option>
+                            <option>Népal</option>
+                            <option>Nicaragua</option>
+                            <option>Niger</option>
+                            <option>Nigeria</option>
+                            <option>Norvège</option>
+                            <option>Nouvelle-Zélande</option>
+                            <option>Oman</option>
+                            <option>Ouganda</option>
+                            <option>Ouzbékistan</option>
+                            <option>Pakistan</option>
+                            <option>Palaos</option>
+                            <option>Panama</option>
+                            <option>Papouasie-Nouvelle-Guinée</option>
+                            <option>Paraguay</option>
+                            <option>Pays-Bas</option>
+                            <option>Pérou</option>
+                            <option>Philippines</option>
+                            <option>Pologne</option>
+                            <option>Portugal</option>
+                            <option>Qatar</option>
+                            <option>République centrafricaine</option>
+                            <option>République dominicaine</option>
+                            <option>République tchèque</option>
+                            <option>Roumanie</option>
+                            <option>Royaume-Uni</option>
+                            <option>Russie</option>
+                            <option>Rwanda</option>
+                            <option>Saint-Christophe-et-Niévès</option>
+                            <option>Saint-Marin</option>
+                            <option>Saint-Vincent-et-les-Grenadines</option>
+                            <option>Sainte-Lucie</option>
+                            <option>Salvador</option>
+                            <option>Samoa</option>
+                            <option>Sao Tomé-et-Principe</option>
+                            <option>Sénégal</option>
+                            <option>Serbie</option>
+                            <option>Seychelles</option>
+                            <option>Sierra Leone</option>
+                            <option>Singapour</option>
+                            <option>Slovaquie</option>
+                            <option>Slovénie</option>
+                            <option>Somalie</option>
+                            <option>Soudan</option>
+                            <option>Soudan du Sud</option>
+                            <option>Sri Lanka</option>
+                            <option>Suède</option>
+                            <option>Suisse</option>
+                            <option>Suriname</option>
+                            <option>Syrie</option>
+                            <option>Tadjikistan</option>
+                            <option>Tanzanie</option>
+                            <option>Tchad</option>
+                            <option>Thaïlande</option>
+                            <option>Timor oriental</option>
+                            <option>Togo</option>
+                            <option>Tonga</option>
+                            <option>Trinité-et-Tobago</option>
+                            <option>Tunisie</option>
+                            <option>Turkménistan</option>
+                            <option>Turquie</option>
+                            <option>Tuvalu</option>
+                            <option>Ukraine</option>
+                            <option>Uruguay</option>
+                            <option>Vanuatu</option>
+                            <option>Vatican</option>
+                            <option>Venezuela</option>
+                            <option>Vietnam</option>
+                            <option>Yémen</option>
+                            <option>Zambie</option>
+                            <option>Zimbabwe</option>
+                        </select>
+                    </div>
+                    <div class="res-field">
+                        <label for="resVille">Ville</label>
+                        <input type="text" id="resVille">
+                    </div>
+                </div>
+
+                <div class="res-field full">
+                    <label for="resAdresse">Adresse</label>
+                    <input type="text" id="resAdresse">
+                </div>
+
+                <div class="res-field full">
+                    <label for="resComment">Commentaire</label>
+                    <textarea id="resComment" rows="3"></textarea>
+                </div>
+            </div>
+
+            <label class="res-checkbox">
+                <input type="checkbox" id="resAccept" required>
+                <span>Je déclare avoir pris connaissance et accepter les <a href="conditions.html">Conditions Générales de Location</a>*</span>
+            </label>
+
+            <p class="res-error" id="resError"></p>
+
+            <button type="button" id="resSubmitBtn" class="panel-btn whatsapp-panel res-submit-btn">
+                <i class="fa-brands fa-whatsapp"></i> Envoyer Ma Réservation Sur WhatsApp
+            </button>
+        </div>
+
+        <aside class="reservation-summary" id="reservationSummary">
+            <!-- filled dynamically by JS -->
+        </aside>
+
+    </div>
+</section>
+
+<!-- DETAILS -->
+<section class="car-details-grid">
+
+    <div class="detail-block">
+        <h3 class="detail-heading">Description</h3>
+        <p class="detail-text" id="carDescription">The Dacia Duster is a practical and affordable SUV, perfect for long road trips across Morocco.</p>
+        <h3 class="detail-heading" style="margin-top:32px">Équipements</h3>
+        <ul class="features-list" id="carFeatures"><li><i class="fa-solid fa-circle-check"></i> Bluetooth</li><li><i class="fa-solid fa-circle-check"></i> USB / AUX</li><li><i class="fa-solid fa-circle-check"></i> Roof Rails</li><li><i class="fa-solid fa-circle-check"></i> Hill Descent Control</li><li><i class="fa-solid fa-circle-check"></i> Rear Camera</li></ul>
+    </div>
+
+    <div class="detail-block">
+        <h3 class="detail-heading">Caractéristiques</h3>
+        <table class="spec-table">
+            <tbody><tr><td>Marque</td>        <td id="stMarque">Dacia</td></tr>
+            <tr><td>Modèle</td>        <td id="stModèle">Dacia Duster</td></tr>
+            <tr><td>Année</td>         <td id="stAnnée">2021</td></tr>
+            <tr><td>Transmission</td> <td id="stTrans">Manuelle</td></tr>
+            <tr><td>Carburant</td>    <td id="stFuel">Diesel</td></tr>
+            <tr><td>Moteur</td>       <td id="stMoteur">1.5L</td></tr>
+            <tr><td>Places</td>        <td id="stPlaces">5</td></tr>
+            <tr><td>Portes</td>        <td id="stPortes">4</td></tr>
+            <tr><td>Bagages</td>      <td id="stBagages">2 Grandes</td></tr>
+            <tr><td>Couleur</td>        <td id="stCouleur">Grise</td></tr>
+        </tbody></table>
+    </div>
+
+    <div class="detail-block">
+        <h3 class="detail-heading">Informations de Adresse</h3>
+        <table class="spec-table">
+            <tbody><tr><td><i class="fa-solid fa-user"></i> Âge Minimum</td>              <td>21 Ans</td></tr>
+            <tr><td><i class="fa-solid fa-id-card"></i> Permis de Conduire</td>       <td>2+ Ans</td></tr>
+            <tr><td><i class="fa-solid fa-shield-halved"></i> Assurance</td>        <td>Incluse</td></tr>
+            <tr><td><i class="fa-solid fa-road"></i> Kilométrage</td>                  <td>Illimité</td></tr>
+            <tr><td><i class="fa-solid fa-hand-holding-dollar"></i> Caution</td>   <td>No Caution</td></tr>
+            <tr><td><i class="fa-solid fa-truck"></i> Livraison</td>                <td>Disponible</td></tr>
+        </tbody></table>
+        <div class="rental-note">
+            <i class="fa-solid fa-circle-info"></i>
+            Livraison gratuite en ville de Tanger et à l'aéroport.
+        </div>
+    </div>
+
+</section>
+
+<!-- RELATED CARS -->
+<section class="related-section" style="display: none;">
+    <div class="related-header">
+        <h2 class="related-title" id="relatedTitre">Voitures Similaires (Dacia)</h2>
+        <div class="related-arrows">
+            <button class="ra-prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="ra-next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+    <div class="related-track" id="relatedTrack"></div>
+</section>
+
+<div id="site-footer"></div>
+</body>
+</html>

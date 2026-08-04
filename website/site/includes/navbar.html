@@ -1,0 +1,43 @@
+<!--
+    ============================================================
+    NAVBAR — SINGLE SOURCE OF TRUTH
+    ============================================================
+    This file is loaded into every page by js/include.js.
+    Edit it ONCE here and every page updates automatically.
+
+    - Brand name: change the two <span> lines below (logo).
+    - Menu items: add/remove <li> lines inside .nav-links.
+      Give each <a> a data-page value matching that page's
+      <body data-page="..."> attribute so the active link
+      highlights itself automatically.
+    - WhatsApp number: change the href on .whatsapp-btn.
+    ============================================================
+-->
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            <a href="index.html"><span>Amro</span> y <span>Omar</span></a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html" data-page="index">Accueil</a></li>
+            <li><a href="about.html" data-page="about">À Propos</a></li>
+            <li><a href="fleet.html" data-page="fleet">Nos Voitures</a></li>
+            <li><a href="services.html" data-page="services">Nos Services</a></li>
+            <li><a href="conditions.html" data-page="conditions">Conditions</a></li>
+            <li><a href="contact.html" data-page="contact">Contact</a></li>
+        </ul>
+
+        <a href="https://wa.me/212600000000" target="_blank" class="whatsapp-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="wa-text">WhatsApp</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+    </nav>
+</header>
+<div class="nav-overlay"></div>

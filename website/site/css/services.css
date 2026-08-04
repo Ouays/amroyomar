@@ -1,0 +1,223 @@
+/* ============================================================
+   SERVICES PAGE  –  services.css
+   ============================================================ */
+
+/* ── Hero (same language as the "Nos Voitures" hero) ── */
+.services-hero {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.services-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 55%;
+}
+
+.services-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,.85) 0%, rgba(0,0,0,.45) 60%, transparent);
+    z-index: 1;
+}
+
+.services-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 6%;
+}
+
+.services-hero-content p.tag {
+    color: #F4600A;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.services-hero-content h1 {
+    color: #fff;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.services-hero-content h1::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #F4600A;
+    margin-top: 14px;
+    border-radius: 2px;
+}
+
+/* ── Grid ── */
+.services-wrap {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 6% 90px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.service-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 36px 30px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.05);
+    transition: transform .3s, box-shadow .3s, border-color .3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #F4600A;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,0,0,.12);
+    border-color: transparent;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 14px;
+    background: #FFE9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    transition: background .3s;
+}
+
+.service-icon i {
+    font-size: 24px;
+    color: #F4600A;
+}
+
+.service-card:hover .service-icon {
+    background: #F4600A;
+}
+
+.service-card:hover .service-icon i {
+    color: #111;
+}
+
+.service-card h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.75;
+}
+
+.service-num {
+    position: absolute;
+    top: 22px;
+    right: 26px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #eee;
+}
+
+/* ── CTA band ── */
+.services-cta {
+    background: #111;
+    border-radius: 20px;
+    max-width: 1300px;
+    margin: 0 auto 90px;
+    padding: 50px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.services-cta h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.services-cta p {
+    color: #bbb;
+    font-size: 14px;
+}
+
+.services-cta .cta-btn {
+    background: #F4600A;
+    color: #111;
+    text-decoration: none;
+    padding: 15px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: .3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.services-cta .cta-btn:hover {
+    background: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 950px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .services-hero-content h1 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 650px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .services-hero {
+        height: 220px;
+    }
+    .services-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+}

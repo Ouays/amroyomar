@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Voitures</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fleet.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/fleet.js" defer></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/include.js" defer></script>
+</head>
+<body data-page="fleet">
+
+    <div id="site-header"></div>
+<!-- ══════════ HERO ══════════ -->
+<section class="cars-hero">
+    <div class="cars-hero-overlay"></div>
+    <img src="img/img1.jpg" alt="Nos Voitures" class="cars-hero-bg">
+    <div class="cars-hero-content">
+        <h1>Nos Voitures</h1>
+        <p>Trouvez la voiture parfaite pour votre voyage.</p>
+    </div>
+</section>
+
+<!-- ══════════ FLOATING FILTER BAR ══════════ -->
+<div class="cars-filter-wrap">
+    <form class="cars-filter-bar" id="filterForm">
+
+        <div class="cf-field">
+            <label>Marque</label>
+            <select id="filterMarque">
+                <option value="">Toutes les Marques</option>
+                <option value="BMW">BMW</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Range Rover">Range Rover</option>
+                <option value="Dacia">Dacia</option>
+                <option value="Audi">Audi</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Peugeot">Peugeot</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Renault">Renault</option>
+                <option value="Toyota">Toyota</option>
+            </select>
+        </div>
+
+        <div class="cf-field">
+            <label>Catégorie</label>
+            <select id="filterCatégorie">
+                <option value="">Toutes les Catégories</option>
+                <option value="Berline">Berline</option>
+                <option value="SUV">SUV</option>
+                <option value="Citadine">Citadine</option>
+                <option value="Luxe">Luxe</option>
+            </select>
+        </div>
+
+        <div class="cf-field">
+            <label>Transmission</label>
+            <select id="filterTransmission">
+                <option value="">Tous</option>
+                <option value="Automatique">Automatique</option>
+                <option value="Manuelle">Manuelle</option>
+            </select>
+        </div>
+
+        <div class="cf-field">
+            <label>Carburant</label>
+            <select id="filterFuel">
+                <option value="">Tous</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Essence">Essence</option>
+                <option value="Hybride">Hybride</option>
+                <option value="Électrique">Électrique</option>
+            </select>
+        </div>
+
+        <button type="submit" class="cf-btn">
+            <i class="fa-solid fa-magnifying-glass"></i> Rechercher
+        </button>
+
+    </form>
+</div>
+
+<!-- ══════════ CARS LISTING ══════════ -->
+<section class="cars-listing">
+
+    <div class="listing-header">
+        <p class="listing-count">Affichage de <span id="carCount">0</span> Véhicules</p>
+        <div class="listing-sort">
+            Trier par :
+            <select id="sortSelect">
+                <option value="latest">Récent</option>
+                <option value="price-asc">Prix : Croissant</option>
+                <option value="price-desc">Prix : Décroissant</option>
+                <option value="name">Nom A–Z</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="cars-grid" id="carsGrid">
+        <!-- Cards injected by JS -->
+    </div>
+
+    <div class="no-results" id="noResults" style="display:none;">
+        <i class="fa-solid fa-car-burst"></i>
+        <p>Aucune voiture ne correspond. Modifiez vos filtres.</p>
+    </div>
+
+</section>
+
+<div id="site-footer"></div>
+</body>
+</html>

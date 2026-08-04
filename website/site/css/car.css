@@ -1,0 +1,1071 @@
+/* ── Breadcrumb ── */
+.breadcrumb {
+    padding: 18px 6%;
+    font-size: 13px;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.breadcrumb a {
+    color: #888;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.breadcrumb a:hover { color: #111; }
+
+.breadcrumb span {
+    color: #F4600A;
+    font-weight: 600;
+}
+
+.breadcrumb i { font-size: 10px; }
+
+/* ── Main car section ── */
+.car-detail {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 6%;
+    align-items: start;
+}
+
+/* Gallery */
+.main-slider {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #111;
+}
+
+.slides-wrapper { position: relative; aspect-ratio: 16/9; }
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+.slide.active { opacity: 1; }
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,.35);
+    background: rgba(0,0,0,.4);
+    backdrop-filter: blur(6px);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.prev-arrow { left: 14px; }
+.next-arrow { right: 14px; }
+
+.slide-arrow:hover {
+    background: #F4600A;
+    border-color: #F4600A;
+    color: #111;
+}
+
+/* Thumbnails */
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.thumb {
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color .25s;
+    aspect-ratio: 4/3;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumb.active  { border-color: #F4600A; }
+.thumb:hover   { border-color: #F4600A; }
+
+/* Booking panel */
+.booking-panel {
+    border: 1px solid #e8e8e8;
+    border-radius: 18px;
+    padding: 30px 28px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.07);
+    position: sticky;
+    top: 90px;
+}
+
+.panel-price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #F4600A;
+    line-height: 1;
+    margin-bottom: 24px;
+}
+
+.panel-currency {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+}
+.quick-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 10px;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #eee;
+}
+
+.qspec {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #444;
+}
+
+.qspec i {
+    color: black;
+    width: 16px;
+}
+
+.panel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s;
+    margin-bottom: 12px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: none;
+}
+
+.whatsapp-panel {
+    background: #25D366;
+    color: #fff;
+}
+
+.whatsapp-panel:hover { background: #1ebe5d; }
+
+.call-panel {
+    background: transparent;
+    border: 2px solid #ddd !important;
+    color: #333;
+    border: none;
+}
+
+.call-panel:hover {
+    border-color: #111 !important;
+    color: #111;
+}
+
+/* ── Details grid (description / specs / rental) ── */
+.car-details-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px 6% 60px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr;
+    gap: 40px;
+    border-top: 1px solid #eee;
+}
+
+.detail-heading {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 16px;
+}
+
+.detail-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 4px;
+}
+
+/* Features list */
+.features-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 16px;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #444;
+}
+
+.features-list i {
+    color: #F4600A;
+    font-size: 15px;
+}
+
+/* Spec table */
+.spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.spec-table tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.spec-table td {
+    padding: 11px 0;
+    color: #444;
+    vertical-align: middle;
+}
+
+.spec-table td:first-child {
+    color: #888;
+    width: 52%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.spec-table td i {
+    color: black;
+    width: 16px;
+}
+
+.spec-table td:last-child {
+    font-weight: 600;
+    color: #111;
+}
+
+/* Rental note */
+.rental-note {
+    margin-top: 20px;
+    background: #FFF1E6;
+    border: 1px solid #FFC79A;
+    border-radius: 10px;
+    padding: 13px 16px;
+    font-size: 13px;
+    color: #7A3B0A;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rental-note i { color: #F4600A; }
+
+/* ── Related Cars ── */
+.related-section {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 6% 80px;
+}
+
+.related-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.related-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+}
+
+.related-arrows {
+    display: flex;
+    gap: 10px;
+}
+
+.related-arrows button {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.related-arrows button:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+.related-track {
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+}
+
+.related-track::-webkit-scrollbar { display: none; }
+
+.related-card {
+    min-width: 280px;
+    border-radius: 14px;
+    border: 1px solid #eee;
+    overflow: hidden;
+    scroll-snap-align: start;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,.05);
+    transition: .3s;
+}
+
+.related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.1);
+}
+
+.related-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.related-info {
+    padding: 16px 18px;
+}
+
+.related-info h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.related-specs {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.related-specs span {
+    font-size: 12px;
+    color: #777;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.related-specs i {
+    color: #bbb;
+    font-size: 11px;
+}
+
+.related-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.related-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #F4600A;
+}
+
+.related-price span {
+    font-size: 12px;
+    font-weight: 400;
+    color: black;
+}
+
+.related-btn {
+    text-decoration: none;
+    color: #111;
+    border: 1.5px solid #ddd;
+    border-radius: 50px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.related-btn:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+/* ── Car Hero Banner ── */
+.car-hero {
+    position: relative;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0 6%;
+}
+
+.car-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 60%;
+    filter: blur(3px) brightness(0.35);
+    transform: scale(1.05);
+}
+
+.car-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,.75) 0%, rgba(0,0,0,.4) 60%, rgba(0,0,0,.2) 100%);
+    z-index: 1;
+}
+
+.car-hero-left {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.breadcrumb-hero {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.breadcrumb-hero a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.breadcrumb-hero a:hover { color: #fff; }
+
+.breadcrumb-hero span { color: #F4600A; font-weight: 600; }
+
+.breadcrumb-hero i { font-size: 10px; }
+
+.car-hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+}
+
+.car-hero-stars {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #F4600A;
+    font-size: 15px;
+}
+
+.car-hero-stars span {
+    color: #bbb;
+    font-size: 13px;
+    margin-left: 4px;
+}
+
+.car-hero-right {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.car-hero-right img {
+    height: 190px;
+    max-width: 500px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,.5));
+}
+
+@media (max-width: 768px) {
+    .car-hero-right { display: none; }
+    .car-hero-title { font-size: 30px; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 1000px) {
+    .car-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-panel {
+        position: static;
+    }
+
+    .car-details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .thumbnails {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .quick-specs {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .features-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ══════════════════════════════════════════════════════
+   RESERVATION FORM
+══════════════════════════════════════════════════════ */
+.reservation-section {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px 6% 80px;
+    border-top: 1px solid #eee;
+}
+
+.reservation-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 30px;
+}
+
+.reservation-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+    align-items: start;
+}
+
+.res-block {
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    padding: 26px 26px 8px;
+    margin-bottom: 24px;
+}
+
+.res-subheading {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.res-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.res-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.res-field.full {
+    margin-bottom: 18px;
+}
+
+.res-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+}
+
+.res-field input,
+.res-field select,
+.res-field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #111;
+    background: #fff;
+    transition: border-color .2s;
+}
+
+.res-field input:focus,
+.res-field select:focus,
+.res-field textarea:focus {
+    outline: none;
+    border-color: #F4600A;
+}
+
+.res-field textarea { resize: vertical; }
+
+.res-field input.res-invalid,
+.res-field select.res-invalid {
+    border-color: #e74c3c;
+}
+
+.res-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.res-checkbox input {
+    margin-top: 3px;
+    width: 16px;
+    height: 16px;
+    accent-color: #F4600A;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.res-checkbox a {
+    color: #F4600A;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.res-error {
+    display: none;
+    color: #e74c3c;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 6px 0 4px;
+}
+
+.res-error.show { display: block; }
+
+/* ── DATE + TIME PICKER (button that opens the calendar modal) ── */
+.res-dt-group {
+    display: grid;
+    grid-template-columns: 1fr 108px;
+    gap: 10px;
+}
+
+.res-date-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #111;
+    cursor: pointer;
+    text-align: left;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.res-date-btn i { color: #F4600A; font-size: 15px; flex-shrink: 0; }
+
+.res-date-btn span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #999;
+}
+
+.res-date-btn.has-value span { color: #111; font-weight: 500; }
+
+.res-date-btn:hover { border-color: #F4600A; }
+
+.res-date-btn.res-invalid { border-color: #e74c3c; }
+
+.res-time-select {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #111;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color .2s;
+}
+
+.res-time-select:focus { outline: none; border-color: #F4600A; }
+.res-time-select.res-invalid { border-color: #e74c3c; }
+
+/* ── CALENDAR MODAL ── */
+.res-cal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 17, 17, .55);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.res-cal-overlay.show { display: flex; }
+
+.res-cal-modal {
+    background: #fff;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 340px;
+    padding: 22px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    animation: resCalPop .15s ease-out;
+}
+
+@keyframes resCalPop {
+    from { opacity: 0; transform: translateY(8px) scale(.98); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.res-cal-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.res-cal-modal-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+}
+
+.res-cal-close-x {
+    border: none;
+    background: #f4f4f4;
+    color: #666;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s;
+}
+.res-cal-close-x:hover { background: #ececec; }
+
+.res-cal-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.res-cal-nav-btn {
+    border: 1px solid #eee;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #444;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s, border-color .2s;
+}
+.res-cal-nav-btn:hover { background: #fff3ec; border-color: #F4600A; color: #F4600A; }
+.res-cal-nav-btn:disabled { opacity: .3; cursor: not-allowed; }
+.res-cal-nav-btn:disabled:hover { background: #fff; border-color: #eee; color: #444; }
+
+.res-cal-month-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111;
+    text-transform: capitalize;
+}
+
+.res-cal-dow-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 4px;
+}
+.res-cal-dow-row span {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: #aaa;
+}
+
+.res-cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-bottom: 14px;
+}
+
+.res-cal-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    border-radius: 8px;
+    color: #333;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid transparent;
+    transition: background .15s, color .15s;
+}
+
+.res-cal-day.empty { visibility: hidden; cursor: default; }
+
+.res-cal-day.today {
+    border-color: #F4600A;
+    font-weight: 700;
+    color: #F4600A;
+}
+
+.res-cal-day:not(.disabled):not(.empty):hover {
+    background: #fff3ec;
+    color: #F4600A;
+}
+
+.res-cal-day.selected {
+    background: #F4600A;
+    color: #fff;
+    font-weight: 700;
+}
+
+.res-cal-day.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    text-decoration: line-through;
+    text-decoration-color: #e2e2e2;
+}
+
+.res-cal-day.disabled.booked {
+    color: #e74c3c;
+    background: #fdecea;
+    text-decoration: none;
+}
+
+.res-cal-legend {
+    display: flex;
+    gap: 16px;
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 16px;
+}
+.res-cal-legend span { display: flex; align-items: center; gap: 6px; }
+.res-legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.res-legend-avail { background: #F4600A; }
+.res-legend-booked { background: #e74c3c; }
+
+.res-cal-modal-footer {
+    display: flex;
+    gap: 10px;
+}
+
+.res-cal-btn-secondary {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    transition: background .2s;
+}
+.res-cal-btn-secondary:hover { background: #f7f7f7; }
+
+@media (max-width: 480px) {
+    .res-dt-group { grid-template-columns: 1fr; }
+}
+
+.res-submit-btn {
+    margin-top: 10px;
+}
+
+/* Summary sidebar */
+.reservation-summary {
+    border: 1px solid #e8e8e8;
+    border-radius: 18px;
+    padding: 26px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.07);
+    position: sticky;
+    top: 90px;
+}
+
+.rs-heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.rs-car {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.rs-car img {
+    width: 90px;
+    height: 66px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.rs-car-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 4px;
+}
+
+.rs-car-price {
+    font-size: 13px;
+    color: #999;
+}
+
+.rs-car-price span {
+    color: #F4600A;
+    font-weight: 700;
+}
+
+.rs-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    gap: 10px;
+}
+
+.rs-line span:first-child {
+    color: #888;
+}
+
+.rs-line span:last-child {
+    font-weight: 600;
+    color: #111;
+    text-align: right;
+}
+
+.rs-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 2px solid #111;
+}
+
+.rs-total span:first-child {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+}
+
+.rs-total span:last-child {
+    font-size: 22px;
+    font-weight: 700;
+    color: #F4600A;
+}
+
+.rs-placeholder {
+    font-size: 13px;
+    color: #999;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 1000px) {
+    .reservation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation-summary {
+        position: static;
+        order: -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .res-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .res-block {
+        padding: 20px 18px 4px;
+    }
+}

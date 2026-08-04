@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/include.js" defer></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="index">
+
+<div id="site-header"></div>
+<!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<section class="hero">
+
+    <div class="swiper heroSwiper">
+
+        <div class="swiper-wrapper">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+
+                <img src="img/img1.jpg" alt="BMW">
+
+                <div class="overlay"></div>
+
+                <div class="hero-content">
+
+                    <span class="badge">🔥 OFFRE SPÉCIALE</span>
+
+                    <h1>Conduisez Luxe<br>Pour Moins</h1>
+
+                    <p>Voitures premium. Meilleurs prix.<br>Voyages inoubliables.</p>
+
+                    <a href="#" class="hero-btn">
+                        Réserver sur WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+
+                <img src="img/img2.jpg" alt="Mercedes">
+
+                <div class="overlay"></div>
+
+                <div class="hero-content">
+
+                    <span class="badge">SÉLECTION PREMIUM</span>
+
+                    <h1>Explorez le Maroc</h1>
+
+                    <p>Voitures confortables pour chaque aventure.</p>
+
+                    <a href="#" class="hero-btn">
+                        Réserver Maintenant
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+
+                <img src="img/img3.png" alt="Audi">
+
+                <div class="overlay"></div>
+
+                <div class="hero-content">
+
+                    <span class="badge">MEILLEUR PRIX</span>
+
+                    <h1>Le Luxe Commence Ici</h1>
+
+                    <p>Conduisez des véhicules premium à des prix abordables.</p>
+
+                    <a href="#" class="hero-btn">
+                        Contactez-nous
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-choose">
+
+    <h2 class="section-title">Pourquoi Nous Choisir</h2>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-car"></i></div>
+            <h3>Voitures Premium</h3>
+            <p>Véhicules bien entretenus, propres et fiables.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-tag"></i></div>
+            <h3>Meilleurs Prix</h3>
+            <p>Tarifs compétitifs sans frais cachés.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <h3>Livraison Partout</h3>
+            <p>Nous livrons à l'aéroport, à l'hôtel ou chez vous.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-headset"></i></div>
+            <h3>Support 24h/7j</h3>
+            <p>Nous sommes disponibles à tout moment sur WhatsApp.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FEATURED CARS -->
+<section class="featured-cars">
+
+    <div class="section-header">
+        <h2 class="section-title">Voitures en Vedette</h2>
+        <a href="fleet.html" class="view-all">Voir Toutes les Voitures <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <!-- Search / Filter Bar -->
+   <form class="filter-bar">
+
+    <div class="filter-field">
+        <label>Marque</label>
+        <select name="brand">
+            <option value="">Toutes les Marques</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Range Rover">Range Rover</option>
+            <option value="Dacia">Dacia</option>
+            <option value="Audi">Audi</option>
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="Peugeot">Peugeot</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Renault">Renault</option>
+            <option value="Toyota">Toyota</option>
+        </select>
+    </div>
+
+    <div class="filter-field">
+        <label>Transmission</label>
+        <select name="transmission">
+            <option value="">Tous</option>
+            <option value="Automatique">Automatique</option>
+            <option value="Manuelle">Manuelle</option>
+        </select>
+    </div>
+
+    <div class="filter-field">
+        <label>Carburant</label>
+        <select name="fuel">
+            <option value="">Tous</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Essence">Essence</option>
+            <option value="Hybride">Hybride</option>
+            <option value="Électrique">Électrique</option>
+        </select>
+    </div>
+
+    <div class="filter-field">
+        <label>Fourchette de Prix</label>
+        <select name="price">
+            <option value="">Tout Prix</option>
+            <option value="0-300">Moins de 300 €</option>
+            <option value="300-500">300 – 500 €</option>
+            <option value="500-700">500 – 700 €</option>
+            <option value="700-99999">700+ €</option>
+        </select>
+    </div>
+
+    <button type="submit" class="filter-btn">Rechercher</button>
+
+</form>
+
+    <div class="cars-grid">
+
+        <div class="car-card">
+            <img src="img/car1.jpg" alt="BMW 520d">
+            <div class="car-info">
+                <h3>BMW 520d</h3>
+                <p class="car-specs">Automatique &middot; Diesel &middot; 5 Places</p>
+                <p class="car-price">599 <span>€/jour</span></p>
+                <a href="#" class="car-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="img/car1.jpg" alt="Mercedes C-Class">
+            <div class="car-info">
+                <h3>Mercedes C-Class</h3>
+                <p class="car-specs">Automatique &middot; Diesel &middot; 5 Places</p>
+                <p class="car-price">499 <span>€/jour</span></p>
+                <a href="#" class="car-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="img/car1.jpg" alt="Range Rover Evoque">
+            <div class="car-info">
+                <h3>Range Rover Evoque</h3>
+                <p class="car-specs">Automatique &middot; Diesel &middot; 5 Places</p>
+                <p class="car-price">799 <span>€/jour</span></p>
+                <a href="#" class="car-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="car-card" >
+            <img src="img/car1.jpg" alt="Dacia Duster">
+            <div class="car-info">
+                <h3>Dacia Duster</h3>
+                <p class="car-specs">Manuelle &middot; Diesel &middot; 5 Places</p>
+                <p class="car-price">299 <span>€/jour</span></p>
+                <a href="#" class="car-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+
+    <h2 class="section-title light">Comment Ça Marche</h2>
+
+    <div class="steps">
+
+        <div class="step">
+            <div class="step-icon"><i class="fa-solid fa-car-side"></i></div>
+            <h3>Choisissez Votre Voiture</h3>
+            <p>Parcourez notre flotte et choisissez la parfaite.</p>
+        </div>
+
+        <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+        <div class="step">
+            <div class="step-icon"><i class="fa-solid fa-comment-dots"></i></div>
+            <h3>Remplissez Vos Infos</h3>
+            <p>Entrez vos informations et envoyez la réservation.</p>
+        </div>
+
+        <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+        <div class="step">
+            <div class="step-icon"><i class="fa-solid fa-handshake"></i></div>
+            <h3>Confirmation Express</h3>
+            <p>Nous confirmons votre réservation avec vous.</p>
+        </div>
+
+    </div>
+</section>
+
+<!--Testimonials-->
+<!--Testimonials-->
+<section class="testimonials">
+
+    <h2 class="section-title">Ce Que Disent Nos Clients</h2>
+
+    <div class="swiper testimonialSwiper">
+
+        <div class="swiper-wrapper" id="reviewsWrapper">
+            <!-- Reviews injected by JS -->
+        </div>
+
+    </div>
+
+</section>
+<!-- CTA BANNER -->
+<section class="cta-banner">
+
+    <div class="cta-overlay"></div>
+
+    <img src="img/img1.jpg" alt="Drive with us" class="cta-bg">
+
+    <div class="cta-content">
+        <h2>Prêt à Conduire ?</h2>
+        <p>Réservez votre voiture idéale aujourd'hui.</p>
+        <a href="#" class="cta-btn"><i class="fa-brands fa-whatsapp"></i> Contactez-nous sur WhatsApp</a>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<div id="site-footer"></div>
+
+<!-- Swiper JS -->
+ <script>
+/* Load reviews from TDData */
+document.addEventListener('DOMContentLoaded', () => {
+    const reviews = TDData.getReviews();
+    const wrapper = document.getElementById('reviewsWrapper');
+    if (!wrapper || !reviews.length) return;
+
+    wrapper.innerHTML = reviews.map(r => {
+        const stars = Array(5).fill('<i class="fa-solid fa-star"></i>').map((s, i) => 
+            i < r.stars ? s : s.replace('fa-star', 'fa-star" style="color:#ddd"')
+        ).join('');
+        return `
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <div class="stars">${stars}</div>
+                    <p>"${r.text}"</p>
+                    <span class="customer">&mdash; ${r.name}, ${r.location}</span>
+                </div>
+            </div>
+        `;
+    }).join('');
+});
+</script>
+
+</body>
+</html>
+

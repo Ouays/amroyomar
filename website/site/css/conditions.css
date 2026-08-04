@@ -1,0 +1,221 @@
+/* ============================================================
+   CONDITIONS PAGE  –  conditions.css
+   Same visual language as services.css / fleet.css hero pattern.
+   ============================================================ */
+
+/* ── Hero (same language as "Nos Voitures" / "Nos Services") ── */
+.conditions-hero {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.conditions-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 55%;
+}
+
+.conditions-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,.85) 0%, rgba(0,0,0,.45) 60%, transparent);
+    z-index: 1;
+}
+
+.conditions-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 6%;
+}
+
+.conditions-hero-content p.tag {
+    color: #F4600A;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.conditions-hero-content h1 {
+    color: #fff;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.conditions-hero-content h1::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #F4600A;
+    margin-top: 14px;
+    border-radius: 2px;
+}
+
+/* ── Wrap ── */
+.conditions-wrap {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px 6% 90px;
+}
+
+.conditions-intro {
+    max-width: 800px;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.conditions-updated {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #FFE9D9;
+    color: #C1560A;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 50px;
+    margin-bottom: 22px;
+}
+
+/* ── Card grid ── */
+.conditions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.condition-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 32px 30px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.05);
+    transition: transform .3s, box-shadow .3s, border-color .3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.condition-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #F4600A;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s;
+}
+
+.condition-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0,0,0,.12);
+    border-color: transparent;
+}
+
+.condition-card:hover::before {
+    transform: scaleX(1);
+}
+
+.condition-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.condition-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: #FFE9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .3s;
+}
+
+.condition-icon i {
+    font-size: 20px;
+    color: #F4600A;
+}
+
+.condition-card:hover .condition-icon {
+    background: #F4600A;
+}
+
+.condition-card:hover .condition-icon i {
+    color: #111;
+}
+
+.condition-head h3 {
+    font-size: 17px;
+    color: #111;
+    font-weight: 700;
+}
+
+.condition-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.condition-card p + p {
+    margin-top: 12px;
+}
+
+/* ── Disclaimer note ── */
+.conditions-note {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: #111;
+    border-radius: 16px;
+    padding: 28px 30px;
+    margin-top: 40px;
+}
+
+.conditions-note i {
+    color: #F4600A;
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.conditions-note p {
+    color: #bdbdbd;
+    font-size: 13.5px;
+    line-height: 1.75;
+}
+
+.conditions-note strong {
+    color: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .conditions-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .conditions-hero-content h1 {
+        font-size: 32px;
+    }
+    .conditions-note {
+        flex-direction: column;
+    }
+}
